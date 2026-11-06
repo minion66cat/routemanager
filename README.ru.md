@@ -111,3 +111,7 @@ open /Applications/RouteManager.app --args --demo
 ## Как это устроено
 
 Нативное приложение на SwiftUI без зависимостей. Состояние сети читается через `netstat -rn`, `route get`, `scutil --nwi`, `networksetup` и `ipconfig`, маршруты меняются через `/sbin/route add | change | delete` одним скриптом на пачку.
+
+## Лицензия
+
+[MIT](LICENSE) © 2026 minion66cat. Программа распространяется «как есть», без каких‑либо гарантий.

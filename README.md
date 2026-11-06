@@ -6,7 +6,7 @@ A small native macOS app for managing static routes and `/etc/hosts` — without
 
 Paste a batch of IPs, subnets or domains and send them through the router you choose — for example, let certain sites bypass your VPN. Routes are re-applied automatically after a reboot, Wi‑Fi reconnect or network change.
 
-> The interface is in Russian for now. A short glossary of the main buttons is [below](#ui-glossary).
+> The interface is in Russian for now.
 
 ![Address lists](docs/screenshots/lists.jpg)
 
@@ -75,24 +75,6 @@ cd routemanager
    - in Settings (⌘,) click **Разрешить без пароля…** (allow without password) once;
    - turn on **Запускать при входе в систему** (launch at login).
 
-### UI glossary
-
-| Russian | Meaning |
-|---|---|
-| Списки / Новый список | Lists / New list |
-| Через · Роутер текущей сети | Via · Current network's router |
-| Другой IP… | Other IP… |
-| Применять автоматически | Apply automatically |
-| Направить через … | Route via … |
-| Проверить | Check |
-| Удалить маршруты | Delete routes |
-| Таблица маршрутов · Показать системные | Routing table · Show system routes |
-| Файл hosts · Записи / Текст · Сохранить | hosts file · Entries / Text · Save |
-| Убрать дубликаты · Отменить правки | Remove duplicates · Discard changes |
-| Запускать при входе в систему | Launch at login |
-| Разрешить без пароля… / Выключить | Allow without password… / Turn off |
-| Журнал | Log |
-
 ## Demo mode
 
 ```bash
@@ -131,3 +113,7 @@ Routes added by the app disappear after a reboot.
 ## How it works
 
 Native SwiftUI app without dependencies. It reads network state with `netstat -rn`, `route get`, `scutil --nwi`, `networksetup` and `ipconfig`, and changes routes with `/sbin/route add | change | delete` in a single script per batch.
+
+## License
+
+[MIT](LICENSE) © 2026 minion66cat. The software is provided “as is”, without warranty of any kind.
